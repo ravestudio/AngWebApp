@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "The Single Page Blogger";
+    ViewBag.app = "spBlogger";
+}
+
+@section Header{
+
+    <base href="/">
+    <script src='@Url.Content("~/Scripts/angular-ui-router.js")'></script>
+    <script src='@Url.Content("~/Scripts/angular-resource.js")'></script>
+
+    <script src='@Url.Content("~/Scripts/spBlogger/app.js")'></script>
+    <script src='@Url.Content("~/Scripts/spBlogger/Modules/posts/postModule.js")'></script>
+    <script src='@Url.Content("~/Scripts/spBlogger/Modules/posts/controllers.js")'></script>
+    <script src='@Url.Content("~/Scripts/spBlogger/Modules/posts/services.js")'></script>
+    <script src='@Url.Content("~/Scripts/spBlogger/Modules/admin/adminModule.js")'></script>
+    <script src='@Url.Content("~/Scripts/spBlogger/Modules/admin/controllers.js")'></script>
+    <script src='@Url.Content("~/Scripts/spBlogger/Modules/admin/services.js")'></script>
+}
+
+<div class="container">
+    <br />
+    <div class="jumbotron text-center">
+        <h1>The Single Page Blogger</h1>
+        <p>One stop blogging solution</p>
+    </div>
+    <div ui-view></div>
+    <div class="row footer">
+        <div class="col-xs-12 text-center">
+            <p>The Single Page Blogger <app-version /></p>
+        </div>
+    </div>
+</div>

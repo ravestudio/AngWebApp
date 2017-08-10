@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Test";
+}
+
+<h2>Test</h2>
+
+<input type="button" value="click" onclick="Del()"/>
+
+
+<script type="text/javascript">
+
+    function Del() {
+        $.ajax({
+            url: "/api/posts/5",
+            type: "DELETE",
+            dataType: "json",
+            success: function (data, statusText) {
+                alert(data);
+            },
+            error: function (request, textStatus, error) {
+                alert(error);
+                debugger;
+            }
+        });
+    }
+
+</script>
+
